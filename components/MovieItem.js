@@ -3,12 +3,20 @@ import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native'
 
 
 export default function MovieItem({ item, navigation }) {
+
     return (
         <TouchableOpacity
-            onPress={() => navigation.navigate("Movie Details",{
-            itemId: item.imdbID,
-            otherParam: 'anything you want here',
-          })}
+            onPress={() => {
+                // const screenNavigation = navigation.getParent();
+                // screenNavigation.setOptions({
+                //     headerShown: false,
+                // });
+                navigation.navigate("Movie Details", {
+                    itemId: item.imdbID,
+                    otherParam: 'anything you want here',
+                    navigation: navigator
+                });
+            }}
         >
             <View style={styles.container}>
                 <Image source={{ uri: item.Poster }} style={styles.image} />
