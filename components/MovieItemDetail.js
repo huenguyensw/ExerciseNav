@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 
-export default function MovieItemDetail({ route, navigation }) {
-    const { itemId, otherParam } = route.params;
+export default function MovieItemDetail({ route}) {
+    const { itemId, navigation } = route.params;
     const [movie, setMovie] = useState('');
     const URL = 'https://www.omdbapi.com/?apikey=460655c6&i=' + itemId;
 
     useEffect(() => {
         const screenNavigation = navigation.getParent();
+        console.log('screenNavigation', navigation.getParent())
         
-        // Hide the header when the component mounts
+        //Hide the header when the component mounts
         screenNavigation.setOptions({
             headerShown: false,
         });

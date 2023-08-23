@@ -14,7 +14,7 @@ export default function MovieItem({ item, navigation }) {
                 navigation.navigate("Movie Details", {
                     itemId: item.imdbID,
                     otherParam: 'anything you want here',
-                    navigation: navigator
+                    navigation: navigation
                 });
             }}
         >

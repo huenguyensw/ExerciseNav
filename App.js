@@ -3,6 +3,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { StyleSheet, View } from 'react-native';
 import StackNavigator from './components/navigators/StackNavigator';
 import DrawerNavigator from './components/navigators/DrawerNavigator';
+import RootNavigator from './components/navigators/RootNavigator';
+import AuthProvider from './components/contexts/AuthProvider';
 
 
 export default function App() {
@@ -10,7 +12,10 @@ export default function App() {
     <NavigationContainer>
       <View style={styles.container}>
         {/* <StackNavigator/> */}
-        <DrawerNavigator />
+        {/* <DrawerNavigator /> */}
+        <AuthProvider>
+          <RootNavigator />
+        </AuthProvider>
       </View>
     </NavigationContainer>
   );
