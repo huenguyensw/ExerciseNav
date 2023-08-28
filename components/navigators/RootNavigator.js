@@ -8,7 +8,6 @@ import DrawerNavigator from './DrawerNavigator';
 
 export default function RootNavigator() {
     const {accessToken} = useContext(AuthContext)
-    console.log(accessToken)
 
   return (
     <>

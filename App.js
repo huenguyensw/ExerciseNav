@@ -11,8 +11,6 @@ export default function App() {
   return (
     <NavigationContainer>
       <View style={styles.container}>
-        {/* <StackNavigator/> */}
-        {/* <DrawerNavigator /> */}
         <AuthProvider>
           <RootNavigator />
         </AuthProvider>
@@ -26,7 +24,5 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     marginTop: 50,
-    // alignItems: 'center',
-    // justifyContent: 'center',
   },
 });

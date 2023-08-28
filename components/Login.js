@@ -5,8 +5,6 @@ import { AuthContext } from './contexts/AuthProvider'
 export default function Login() {
     const {handleLogin} = useContext(AuthContext);
     
-    const {accessToken} = useContext(AuthContext);
-    console.log('accessToken', accessToken)
   return (
     <View style={styles.container}>
         <Text style={styles.title}>Wellcome</Text>

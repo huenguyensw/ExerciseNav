@@ -7,10 +7,6 @@ export default function MovieItem({ item, navigation }) {
     return (
         <TouchableOpacity
             onPress={() => {
-                // const screenNavigation = navigation.getParent();
-                // screenNavigation.setOptions({
-                //     headerShown: false,
-                // });
                 navigation.navigate("Movie Details", {
                     itemId: item.imdbID,
                     otherParam: 'anything you want here',

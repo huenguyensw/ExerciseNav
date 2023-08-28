@@ -26,7 +26,6 @@ export default function DrawerNavigator() {
         fontWeight: 'bold',
       }
     }}>
-      {/* <Drawer.Screen name="Login" component={Login}/> */}
       <Drawer.Screen name="Movie List" component={StackNavigator}/>
       <Drawer.Screen name="Settings" component={BottomTabNavigator} />
       <Drawer.Screen name="Logout" component={Logout} options={{headerShown: false}}/>
